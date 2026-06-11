@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #d73636;
+  }
+  
+  .page {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .hero {
+    padding: 24px;
+  }
+  
+  h1,
+  p {
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  .primary-button {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
