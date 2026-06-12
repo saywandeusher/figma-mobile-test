@@ -1,44 +1,228 @@
 * {
     box-sizing: border-box;
   }
-  
+
+  :root {
+    --header-height: 80px;
+  }
+
+  html,
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #d73636;
+    height: 100%;
   }
-  
+
+  body {
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: sans-serif;
+  }
+
   .page {
     width: 100%;
     min-height: 100vh;
   }
-  
-  .hero {
-    padding: 24px;
-  }
-  
+
   h1,
   p {
     margin: 0;
   }
-  
-  h1 {
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 12px;
+
+  /* Header */
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: #ffffff;
+  }
+
+  /* Content */
+
+  .page-background {
+    background-image: url("../assets/images/background.jpg");
+    background-repeat: repeat;
+    background-size: 400px auto;
   }
   
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 24px;
+  .scrollable-content {
+    height: calc(100vh - 10%);
+    width: 30vw;
+    padding-top: var(--header-height);
+    min-width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
   }
   
-  .primary-button {
-    border: none;
-    border-radius: 999px;
-    padding: 12px 20px;
-    font-size: 16px;
+  .main-visual {
+    width: 100%;
+    display: block;
+  }
+
+  .period {
+    width: 100%;
+    display: block;
+  }
+
+  .main-content {
+    padding: 0 4%;
+    width: 100%;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding: 1.5rem 0;
+  }
+
+  .heading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: center;
+    font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    color: black;
+  }
+
+  .annotation {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding:0 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align:left;
+    font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    color: black;
+  }
+
+  .text-link {
+    text-decoration: underline;
+    color:blue;
     cursor: pointer;
+    display: inline;
+  }
+
+  .section2 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btnset1 {
+    padding: 0 0 0.3rem 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .btnset1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section3 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stamp-header {
+    background: #6B2792;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .stamp-frame {
+    position: relative;
+    align-items: center;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #ffffff;
+    background-image: url("../assets/buttons/gold-corner.png");
+    background-size: 95% 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .stamp-frame p {
+    margin: 0.5rem 0 0 0;
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+ 
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    background-color: #ffffff;
+    border-radius: 0px 0 20px 20px;
+    border-color: #DAD4BA;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+  }
+
+  .container p {
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    text-align: center;
+    font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    color: black;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 5%;
+    background: #ffffff;
+  }
+
+  .footer img{
+    width: 30vw;
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --header-height: 80px;
+    }
+
+    .site-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: #ffffff;
+    }
+
+    .scrollable-content {
+    width: 100%;
+    }
+
+    .footer img{
+      width: 100vw;
+    }
+
   }
